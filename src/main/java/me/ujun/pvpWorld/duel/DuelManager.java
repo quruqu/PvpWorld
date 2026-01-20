@@ -8,6 +8,7 @@ import com.sk89q.worldedit.regions.CuboidRegion;
 import com.sk89q.worldedit.world.block.BlockTypes;
 import it.unimi.dsi.fastutil.chars.Char2ShortRBTreeMap;
 import me.ujun.pvpWorld.arena.*;
+import me.ujun.pvpWorld.config.ConfigHandler;
 import me.ujun.pvpWorld.kit.Kit;
 import me.ujun.pvpWorld.kit.KitManager;
 import me.ujun.pvpWorld.saving.ArenasFile;
@@ -163,6 +164,7 @@ public class DuelManager {
                     p.setGameMode(GameMode.SURVIVAL);
                     ResetUtil.resetPlayerState(p);
                     setSpectator(p, false, inst);
+                    p.getScoreboardTags().remove(ConfigHandler.ffaTag);
 
                     if (inst.kit.getType().equals("sumo") || inst.kit.getType().equals("spleef")) {
                         p.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 12000, 255, false, false, false));

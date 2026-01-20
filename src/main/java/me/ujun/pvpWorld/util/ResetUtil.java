@@ -21,7 +21,6 @@ public class ResetUtil {
         player.setFireTicks(0);
         player.setFallDistance(0);
 
-        player.getScoreboardTags().remove(ConfigHandler.ffaTag);
         //food reset
         player.setFoodLevel(20);
         player.setSaturation(0);
@@ -29,7 +28,6 @@ public class ResetUtil {
     }
 
 
-    //심한욕
     public static void resetAllAttributes(Player player) {
         player.getAttribute(Attribute.GENERIC_LUCK).setBaseValue(0);
         player.getAttribute(Attribute.GENERIC_ARMOR).setBaseValue(0);

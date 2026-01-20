@@ -17,7 +17,7 @@ public class VoidManager {
         w = Bukkit.createWorld(wc);
 
         if (w != null) {
-            w.setDifficulty(Difficulty.NORMAL);
+            w.setDifficulty(Difficulty.HARD);
             w.setPVP(true);
             w.setSpawnLocation(0, 64, 0);
             w.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, false);
